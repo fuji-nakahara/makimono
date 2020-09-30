@@ -1,4 +1,6 @@
-require "makimono/version"
+# frozen_string_literal: true
+
+require 'makimono/version'
 
 module Makimono
   class Error < StandardError; end
