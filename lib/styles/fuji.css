@@ -1,0 +1,14 @@
+p {
+  margin: 0;
+}
+
+hr {
+  border: 0;
+  margin: 1em 0;
+}
+
+em {
+  font-style: normal;
+  text-emphasis-style: filled sesame;
+  -webkit-text-emphasis-style: filled sesame;
+}

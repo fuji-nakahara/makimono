@@ -14,5 +14,6 @@ Gemfile.lock
 .rspec_status
 
 # fixtures
-/spec/fixtures/japanese-novel/output/*
-!/spec/fixtures/japanese-novel/output/.keep
+/spec/fixtures/out/*
+!/spec/fixtures/out/
+!/spec/fixtures/out/.keep

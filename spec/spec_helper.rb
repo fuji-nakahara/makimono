@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
+require 'aruba/rspec'
 require 'bundler/setup'
 require 'makimono'
+
+Dir[File.expand_path('support/**/*.rb', __dir__)].sort.each { |f| require_relative f }
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
@@ -13,4 +16,6 @@ RSpec.configure do |config|
   config.expect_with :rspec do |c|
     c.syntax = :expect
   end
+
+  config.include FixtureHelper
 end

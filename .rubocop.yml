@@ -1,0 +1,25 @@
+require:
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+
+# rubocop
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+
+Style/Documentation:
+  Enabled: false
+
+# rubocop-rspec
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/VerifiedDoubles:
+  IgnoreSymbolicNames: true

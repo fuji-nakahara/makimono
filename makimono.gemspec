@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary       = 'Simple EBook generator'
   spec.homepage      = 'https://github.com/fuji-nakahara/makimono'
   spec.license       = 'MIT'
-  spec.required_ruby_version = Gem::Requirement.new('>= 2.3.0')
+  spec.required_ruby_version = Gem::Requirement.new('>= 2.6.0')
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/fuji-nakahara/makimono'
@@ -27,6 +27,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'commonmarker', '>= 0.21'
+  spec.add_dependency 'fuji_markdown', '>= 0.3'
   spec.add_dependency 'gepub', '>= 1.0'
   spec.add_dependency 'thor', '>= 1.0'
 end

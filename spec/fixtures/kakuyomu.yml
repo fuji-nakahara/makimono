@@ -1,0 +1,5 @@
+output: out/kakuyomu
+markdown: FujiMarkdown
+FujiMarkdown: kakuyomu
+template: empty.txt
+generator: SimpleFile
