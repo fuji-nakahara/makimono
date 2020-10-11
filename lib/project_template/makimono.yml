@@ -1,0 +1,3 @@
+identifier: 'urn:uuid:<%= SecureRandom.uuid %>'
+title: '<%= config[:name].capitalize %>'
+ebook_file_name: '<%= config[:name] %>'

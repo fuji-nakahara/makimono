@@ -33,4 +33,18 @@ RSpec.describe 'makimono', type: :aruba do # rubocop:disable RSpec/DescribeClass
       end
     end
   end
+
+  describe 'new' do
+    let(:name) { 'name' }
+
+    it 'generates a new project' do
+      run_command "makimono new #{name}"
+
+      expect(last_command_started).to be_successfully_executed
+      expect(exist?("#{name}/Gemfile")).to be true
+      expect(exist?("#{name}/makimono.yml")).to be true
+      expect(exist?("#{name}/src")).to be true
+      expect(exist?("#{name}/out")).to be true
+    end
+  end
 end

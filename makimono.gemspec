@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Fuji Nakahara']
   spec.email         = ['fujinakahara2032@gmail.com']
 
-  spec.summary       = 'Simple EBook generator'
+  spec.summary       = 'Simple ebook generator'
   spec.homepage      = 'https://github.com/fuji-nakahara/makimono'
   spec.license       = 'MIT'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.6.0')
