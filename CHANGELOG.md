@@ -6,6 +6,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.1] - 2020-10-12
+
 ### Fixed
 
 - Permit Date and Time types on user config yaml.
@@ -14,5 +16,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - First release!
 
-[Unreleased]: https://github.com/fuji-nakahara/makimono/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/fuji-nakahara/makimono/compare/v0.1.1...HEAD
+[0.1.1]: https://github.com/fuji-nakahara/makimono/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/fuji-nakahara/makimono/releases/tag/v0.1.0
