@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'date'
 require 'yaml'
 
 module Makimono
@@ -10,7 +11,8 @@ module Makimono
       def load_user_config
         user_config = if File.file?(options[:config])
                         yaml = File.read(options[:config])
-                        YAML.safe_load(yaml, filename: File.basename(options[:config]), symbolize_names: true)
+                        filename = File.basename(options[:config])
+                        YAML.safe_load(yaml, permitted_classes: [Date, Time], filename: filename, symbolize_names: true)
                       else
                         {}
                       end

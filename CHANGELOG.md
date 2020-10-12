@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Fixed
+
+- Permit Date and Time types on user config yaml.
+
 ## [0.1.0] - 2020-10-12
 
 - First release!
