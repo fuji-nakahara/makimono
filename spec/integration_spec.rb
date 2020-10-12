@@ -4,7 +4,7 @@ RSpec.describe 'makimono', type: :aruba do # rubocop:disable RSpec/DescribeClass
   describe 'build' do
     context 'with fixtures' do
       before do
-        File.delete(fixture_path('out/fixture.epub')) if File.exist?(fixture_path('out/fixture.epub'))
+        File.delete(fixture_path('out/fixture.epub')) if File.file?(fixture_path('out/fixture.epub'))
       end
 
       it 'generates out/fixture.epub' do

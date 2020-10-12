@@ -26,7 +26,7 @@ module Makimono
       def self.get_template_path(template_config)
         if PRESETS.include?(template_config)
           File.expand_path("../../templates/#{template_config}.erb", __dir__)
-        elsif File.exist?(template_config.to_s)
+        elsif File.file?(template_config.to_s)
           File.expand_path(template_config.to_s)
         else
           raise InvalidTemplateError, "Template file `#{template_config}` does not exist"

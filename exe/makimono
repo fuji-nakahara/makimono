@@ -3,4 +3,10 @@
 
 require 'makimono/cli'
 
+if File.file?('Gemfile')
+  require 'bundler'
+  Bundler.setup
+  Bundler.require(:makimono)
+end
+
 Makimono::CLI.start

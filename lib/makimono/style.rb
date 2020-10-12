@@ -9,7 +9,7 @@ module Makimono
     def self.from_style_config(style_config)
       path = if PRESETS.include?(style_config)
                File.expand_path("../styles/#{style_config}.css", __dir__)
-             elsif File.exist?(style_config.to_s)
+             elsif File.file?(style_config.to_s)
                File.expand_path(style_config.to_s)
              else
                raise InvalidStyleError, "Style file `#{style_config}` does not exist"

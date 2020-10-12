@@ -19,6 +19,7 @@ module Makimono
       converters: %w[Markdown],
       generator: 'EPUB',
       ebook_file_name: 'book',
+      library: File.expand_path('lib'),
 
       # EPUB
       identifier: "urn:uuid:#{SecureRandom.uuid}",
