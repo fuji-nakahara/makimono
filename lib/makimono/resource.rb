@@ -4,11 +4,16 @@ module Makimono
   class Resource
     ORDERED_BASENAME_REGEXP = /\A(?<number>\d+)-(?<title>.+)\z/.freeze
 
-    attr_accessor :path, :content
+    attr_reader :path
+    attr_accessor :content
 
     def initialize(path, content)
-      @path = path
+      self.path = path
       @content = content
+    end
+
+    def path=(new_path)
+      @path = Pathname.new(new_path).cleanpath.to_s
     end
 
     def dirname
