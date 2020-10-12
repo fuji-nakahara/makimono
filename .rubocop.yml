@@ -3,15 +3,13 @@ require:
 
 AllCops:
   NewCops: enable
+  TargetRubyVersion: 2.6
 
 # rubocop
 
 Metrics/BlockLength:
   Exclude:
     - spec/**/*
-
-Style/ClassAndModuleChildren:
-  Enabled: false
 
 Style/Documentation:
   Enabled: false
