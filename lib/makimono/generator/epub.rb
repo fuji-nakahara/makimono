@@ -26,9 +26,9 @@ module Makimono
 
       def add_required_metadata
         @book.identifier = @config.fetch(:identifier)
+        @book.lastmodified = @config.fetch(:modified)
         @book.title = @config.fetch(:title)
         @book.language = @config.fetch(:language)
-        @book.lastmodified = parse_config_time(:modified) if @config[:modified]
       rescue KeyError => e
         raise InvalidConfigurationError, "Required metadata not found: #{e.key}"
       end
@@ -41,7 +41,7 @@ module Makimono
           @book.add_contributor(contributor)
         end
 
-        @book.add_date(parse_config_time(:date).iso8601) if @config[:date]
+        @book.add_date(@config[:date].to_time.iso8601) if @config[:date]
       end
 
       def add_items(resources)
@@ -59,12 +59,6 @@ module Makimono
                  .toc_text(resource.title)
           end
         end
-      end
-
-      def parse_config_time(key)
-        Time.parse(@config[key].to_s)
-      rescue ArgumentError
-        raise InvalidConfigurationError, "Invalid time format: #{key}"
       end
     end
   end

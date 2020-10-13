@@ -30,7 +30,7 @@ RSpec.describe Makimono::Generator::Epub do
     end
 
     context 'with date config' do
-      let(:config) { Makimono::Configuration.new({ date: '2020-10-01' }) }
+      let(:config) { Makimono::Configuration.new({ date: Date.parse('2020-10-01') }) }
 
       it 'calls #add_date' do
         described_class.new(config, book: book_spy).generate(resources)

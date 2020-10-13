@@ -11,23 +11,28 @@ module Makimono
 
     DEFAULTS = {
       # Makimono
-      source: File.expand_path('src'),
-      output: File.expand_path('out'),
-      style: nil,
-      template: 'default.xhtml',
-      markdown: 'CommonMarker',
+      source: 'src',
+      output: 'out',
+      library: 'lib',
       converters: %w[Markdown],
+      markdown: 'CommonMarker',
+      template: 'default.xhtml',
+      style: nil,
       generator: 'EPUB',
       ebook_file_name: 'book',
-      library: File.expand_path('lib'),
 
       # EPUB
       identifier: "urn:uuid:#{SecureRandom.uuid}",
+      modified: Time.now,
       title: 'No title',
-      language: 'ja'
+      language: 'ja',
+      creator: nil,
+      contributor: nil,
+      date: nil,
+      page_progression_direction: nil
     }.freeze
 
-    def_delegators :@config, :[], :fetch, :dig, :slice
+    def_delegators :@config, :[], :fetch, :dig
 
     def initialize(config = {})
       @config = DEFAULTS.merge(config)
