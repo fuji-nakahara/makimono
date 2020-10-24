@@ -1,26 +1,27 @@
 # Makimono
 
-Makimono is a simple ebook generator.
+Makimono provides a command line tool to generate an ebook from a set of markdown files.
 
-## Installation
+## Getting Started
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'makimono'
-```
-
-And then execute:
-
-    $ bundle install
-
-Or install it yourself as:
+First, install Makimono.
 
     $ gem install makimono
 
-## Usage
+Next, create a Makimono project in the `mybook` directory.
 
-TODO: Write usage instructions here
+    $ makimono new mybook
+    $ cd mybook
+
+Write text on a markdown file in the `src` directory.
+
+    $ vi src/01-mybook.md
+
+When you are done writing, create an ebook.
+
+    $ makimono build
+
+This will create an EPUB file in `out/book.epub`.
 
 ## Development
 
