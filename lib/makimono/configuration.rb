@@ -16,6 +16,10 @@ module Makimono
       library: 'lib',
       converters: %w[Markdown],
       markdown: 'CommonMarker',
+      CommonMarker: {
+        options: 'DEFAULT',
+        extensions: []
+      },
       template: 'default.xhtml',
       style: nil,
       generator: 'EPUB',

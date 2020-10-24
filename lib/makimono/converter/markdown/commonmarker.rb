@@ -17,7 +17,11 @@ module Makimono
         private
 
         def options
-          @config.dig(:CommonMarker, :options)&.map(&:upcase)&.map(&:to_sym) || :DEFAULT
+          if (options = @config.dig(:CommonMarker, :options))
+            Array(options).map(&:upcase).map(&:to_sym)
+          else
+            :DEFAULT
+          end
         end
 
         def extensions

@@ -10,7 +10,7 @@ RSpec.describe Makimono::Converter::Markdown::CommonMarker do # rubocop:disable 
     it 'calls CommonMarker.render_html' do
       described_class.new(config).render(markdown)
 
-      expect(commonmarker).to have_received(:render_html).with(markdown, :DEFAULT, [])
+      expect(commonmarker).to have_received(:render_html).with(markdown, %i[DEFAULT], [])
     end
 
     context 'with CommonMarker config' do
