@@ -22,7 +22,6 @@ module Makimono
         copy_file('Gemfile')
         template('makimono.yml', { name: name })
         copy_file('src/01-Title.md', "src/01-#{name.capitalize}.md")
-        create_file('out/.keep')
       end
 
       def run_bundle_install

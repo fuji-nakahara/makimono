@@ -44,7 +44,6 @@ RSpec.describe 'makimono', type: :aruba do # rubocop:disable RSpec/DescribeClass
       expect(exist?("#{name}/Gemfile")).to be true
       expect(exist?("#{name}/makimono.yml")).to be true
       expect(exist?("#{name}/src")).to be true
-      expect(exist?("#{name}/out")).to be true
     end
   end
 end

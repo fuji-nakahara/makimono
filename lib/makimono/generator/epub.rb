@@ -19,6 +19,7 @@ module Makimono
         add_items([@config.style, *resources.reject(&:ordered?)].compact)
         add_ordered_items(resources.select(&:ordered?).sort_by(&:number))
 
+        FileUtils.mkdir_p(@config[:output]) unless Dir.exist?(@config[:output])
         @book.generate_epub("#{File.expand_path(@config[:ebook_file_name], @config[:output])}.epub")
       end
 
