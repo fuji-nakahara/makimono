@@ -1,5 +1,7 @@
 # Makimono
 
+[日本語](README-ja.md)
+
 Makimono provides a command line tool to generate an ebook from a set of markdown files.
 
 ## Getting Started
