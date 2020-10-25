@@ -25,6 +25,10 @@ When you are done writing, create an ebook.
 
 This will create an EPUB file in `out/book.epub`.
 
+## Example
+
+See https://github.com/topics/makimono-book.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

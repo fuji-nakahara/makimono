@@ -185,3 +185,7 @@ converters: [ 'Markdown', 'UnderscoreToSpace' ]
 
 独自のジェネレーターを使用するには、`Makimono::Generator` 以下に `#generate` メソッドを持つ新しいクラスを定義し、設定 `generator` でクラス名を指定します。
 実装は [`Epub`](lib/makimono/generator/epub.rb) や [`SimpleFile`](lib/makimono/generator/simple_file.rb) を参考にしてください。
+
+## 使用例
+
+https://github.com/topics/makimono-book を見てください。
