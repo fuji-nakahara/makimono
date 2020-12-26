@@ -13,7 +13,7 @@ module Makimono
         @book = book
       end
 
-      def generate(resources)
+      def generate(resources) # rubocop:disable Metrics/AbcSize
         add_required_metadata
         add_optional_metadata
         @book.page_progression_direction = @config[:page_progression_direction] if @config[:page_progression_direction]

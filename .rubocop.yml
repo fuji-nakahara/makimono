@@ -7,6 +7,10 @@ AllCops:
 
 # rubocop
 
+Layout/TrailingWhitespace:
+  Exclude:
+    - spec/makimono/converter/markdown_spec.rb
+
 Metrics/BlockLength:
   Exclude:
     - spec/**/*

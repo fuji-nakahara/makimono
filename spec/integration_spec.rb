@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe 'makimono', type: :aruba do # rubocop:disable RSpec/DescribeClass
+RSpec.describe 'makimono', type: :aruba do
   describe 'build' do
     context 'with fixtures' do
       before do
