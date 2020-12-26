@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
-require 'gepub'
+require 'fileutils'
 require 'time'
+
+require 'gepub'
 
 module Makimono
   class Generator
